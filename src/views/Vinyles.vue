@@ -6,8 +6,6 @@
 </template>
 
 <script>
-import axios from "axios";
-import ApiVinyles from "../api/ApiVinyles.js";
 import CardVinyles from "../components/Card/CardVinyles.vue";
 
 export default {
@@ -22,7 +20,7 @@ export default {
   },
   mounted() {
     axios
-      .get(ApiVinyles)
+      .get("vinyles")
       .then((res) => {
         this.listeVinyles = res.data;
         console.log("vinyles", this.listeVinyles);

@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   name: "vinyleById",
@@ -25,7 +24,7 @@ export default {
   },
   mounted() {
     axios
-      .get(`http://localhost:8080/api/vinyles/${this.idVinyle}`)
+      .get(`vinyles/${this.idVinyle}`)
       .then((res) => {
         this.vinyle = res.data;
         console.log("vinyle DETAIL", this.vinyle);

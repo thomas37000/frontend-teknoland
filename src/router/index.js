@@ -9,6 +9,12 @@ const router = createRouter({
       component: () => import("@/views/Vinyles.vue")
     },
     {
+      path: '/vinyle/:idVinyle',
+      name: 'VinyleById',
+      props: true,
+      component: () => import("@/views/VinyleById.vue")
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

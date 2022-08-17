@@ -14,6 +14,11 @@ const router = createRouter({
       component: () => import("@/views/AjoutVinyle.vue"),
     },
     {
+      path: "/ajout-artiste",
+      name: "AjoutArtiste",
+      component: () => import("@/views/AjoutArtiste.vue"),
+    },
+    {
       path: "/vinyle/:idVinyle",
       name: "VinyleById",
       props: true,

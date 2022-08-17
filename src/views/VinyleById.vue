@@ -6,6 +6,7 @@
     <h3>référence: {{ vinyle.reference }}</h3>
     <h4>sortie le: {{ vinyle.dateDeSortie }}</h4>
     <h4>format: {{ vinyle.format }}</h4>
+    <!-- <h3>Artiste: {{vinyle.artiste.nom}}</h3> -->
   </div>
   <div v-else class="loading">Loading Data...!</div>
 </template>

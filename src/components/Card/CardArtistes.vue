@@ -1,7 +1,7 @@
 <script>
 export default {
   props: {
-    listeartistes: {
+    listeArtistes: {
       type: Array,
     },
   },
@@ -19,12 +19,14 @@ export default {
     <table class="table">
       <thead>
         <tr>
-          <th>nom</th>
+          <th>pseudo</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="artiste in listeArtistes" :key="artiste.idArtiste">
-          <td>{{ artiste.nom }}</td>
+          <td></td>
+          <td>{{ artiste.pseudo }}</td>
         </tr>
       </tbody>
     </table>

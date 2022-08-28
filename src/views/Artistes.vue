@@ -1,30 +1,18 @@
-<script>
+<script setup>
+import { ref, onMounted } from "vue";
 import CardArtistes from "../components/Card/CardArtistes.vue";
 
-export default {
-  name: "Artistes",
-  components: {
-    CardArtistes,
-  },
-  data() {
-    return {
-      listeArtistes: [],
-    };
-  },
-  mounted() {
-    axios
-      .get("artistes")
-      .then((res) => {
-        this.listeArtistes = res.data;
-        console.log("artistes", this.listeaArtistes);
-      })
-      .catch((error) => {
-        console.log(error.message);
-        this.errored = true;
-      })
-      .finally(() => (this.loading = false));
-  }
-};
+const listeArtistes = ref([]);
+
+onMounted(() => {
+  loadArtistes();
+});
+
+async function loadArtistes() {
+  const result = await axios.get("artistes");
+  listeArtistes.value = result.data;
+  console.log("listeArtistes", listeArtistes);
+}
 </script>
 
 <template>

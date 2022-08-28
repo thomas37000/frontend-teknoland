@@ -34,7 +34,7 @@ export default {
       </thead>
       <tbody>
         <tr v-for="vinyle in listeVinyles" :key="vinyle.idVinyle">
-          <td>{{ vinyle.titre }}</td>
+          <td>{{ vinyle.titreVinyle }}</td>
           <td>{{ vinyle.reference }}</td>
           <td>
             <a @click="VinyleById(vinyle)"> détail </a>

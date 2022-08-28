@@ -9,6 +9,11 @@ const router = createRouter({
       component: () => import("@/views/Vinyles.vue"),
     },
     {
+      path: "/artistes",
+      name: "Artistes",
+      component: () => import("@/views/Artistes.vue"),
+    },
+    {
       path: "/ajout-vinyle",
       name: "AjoutVinyle",
       component: () => import("@/views/AjoutVinyle.vue"),

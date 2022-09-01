@@ -1,8 +1,5 @@
 <template>
-  <div class="">
-    <h2>Liste de vinyles</h2>
-    <CardVinyles :listeVinyles="listeVinyles" />
-  </div>
+  <CardVinyles :listeVinyles="listeVinyles" />
 </template>
 
 <script>

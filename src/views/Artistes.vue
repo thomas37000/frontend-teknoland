@@ -17,7 +17,7 @@ async function loadArtistes() {
 
 <template>
   <div class="">
-    <h2>Les Artistes du label</h2>
+    <h2>les Artistes du label</h2>
     <CardArtistes :listeArtistes="listeArtistes" />
   </div>
 </template>
